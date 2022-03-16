@@ -4,32 +4,21 @@
  * +----------------------------------------------------------------------
  * |User: gongxulei <email:790707988@qq.com>
  * +----------------------------------------------------------------------
- * |Date: 2022/3/15
+ * |Date: 2022/3/16
  * +----------------------------------------------------------------------
- * |Time: 4:21 下午
+ * |Time: 3:12 下午
  * +----------------------------------------------------------------------
  */
 
-package main
+package linked_list
 
 import (
 	"fmt"
 )
 
+// 单链表
 
-// 单向链表
-
-func main() {
-	list := InitList()
-	// fmt.Println(list)
-	list.InsertNode(1, "test1")
-	list.InsertNode(2, "test2")
-	list.InsertNode(1, "test3")
-	list.InsertNode(3, "test4")
-	list.DeleteNode(2)
-	fmt.Println(list.GetNode(2))
-}
-
+// Node 链表节点
 type Node struct {
 	data interface{} // 数据域
 	next *Node       // 指针域
@@ -40,7 +29,6 @@ type LinkedList struct {
 	length   int // 储存链表的长度
 	headNode *Node
 }
-
 
 // InitList 初始化链表
 func InitList() *LinkedList {
