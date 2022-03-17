@@ -14,6 +14,7 @@ package main
 
 import (
 	"data_structure/linear_list/linked_list"
+	"data_structure/linear_list/queue"
 	sq_stack "data_structure/linear_list/stack"
 	"fmt"
 	"testing"
@@ -40,4 +41,18 @@ func TestSqStack(t *testing.T) {
 		res, _ := stack.Pop()
 		t.Log(res)
 	}
+}
+
+func TestSqQueue(t *testing.T) {
+	sqQueue := queue.InitSqQueue(10)
+	for i := 1; i <= 10; i++ {
+		sqQueue.Push(i)
+	}
+	// t.Log("SqQueue length:", sqQueue.Length())
+	for i := 0; i < 10; i++ {
+		res, _ := sqQueue.Pop()
+		t.Log(res)
+		sqQueue.Push(res)
+	}
+	t.Log(sqQueue)
 }
