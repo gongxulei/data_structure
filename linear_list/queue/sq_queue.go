@@ -18,7 +18,7 @@ import (
 )
 
 // 顺序队列 Sequential Queue
-// 循环队列 Circular Queue
+// 循环队列 Circular Queue 顺序队列的优化版本，解决了空间浪费的问题
 
 type SqQueue struct {
 	// 队头(出队)
