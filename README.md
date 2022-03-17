@@ -9,10 +9,14 @@
 ##### linked_list (链表)
 
 * single_linked_list 单向链表
+* double_linked_list 循环链表
 * circular_linked_list 双向链表
 
 ##### queue（队列）
 
+* sq_queue 顺序队列
+  * circular_queue 循环队列
+* linked_queue 链式队列
 
 ##### stack（栈）
 
