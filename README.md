@@ -23,6 +23,11 @@
 * sq_stack 顺序栈
 * linked_list_stack 链式栈
 
+##### string（串）
+
+* brute_force 暴力匹配算法(BF)
+* KMP算法(是BF算法的优化版本)
+
 #### sort（排序）
 
 * 选择排序
