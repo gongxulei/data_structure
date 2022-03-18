@@ -19,7 +19,7 @@ import (
 // KMP匹配算法
 
 // getNext 获取`模式字符串`的指针位置，最大公共长度
-func getNext(s string, index int) (next int, max_common_len int) {
+func getNext(s string, index int) (next int, maxCommonLen int) {
 	if index <= 1 {
 		return
 	}
@@ -28,13 +28,13 @@ func getNext(s string, index int) (next int, max_common_len int) {
 	j := 1
 	for i := len(SSlice) - 1; i >= 0; i-- {
 		if string(SSlice[:i]) == string(SSlice[j:]) {
-			max_common_len = len(SSlice[:i])
+			maxCommonLen = len(SSlice[:i])
 			break
 		}
 		j++
 	}
-	if max_common_len != 0 {
-		next = index - max_common_len - 1
+	if maxCommonLen != 0 {
+		next = index - maxCommonLen - 1
 	}
 	return
 }
@@ -68,7 +68,7 @@ func KMPMatchString(S string, T string) (index int, counts int, err error) {
 
 		// 匹配失败 初始化i位置
 		next, maxCommonLen := getNext(T, i)
-		if next == 0 {
+		if maxCommonLen == 0 {
 			index = j
 			i = -1
 		} else {
